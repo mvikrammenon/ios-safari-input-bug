@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TESTING input tag</title>
+</head>
+<body>
+
+    <div id='display-area' style='height:30px; background-color:gray; width:100%;'></div>
+
+    <input id='myInput' type='text' onfocus='' style='height:50px; width:100%; margin-bottom:20px; margin-top:50px;' placeholder='type something' onblur='inputBlured()' />
+    
+    <script type="text/javascript">
+        console.log('hi')
+        var displayActionArea = document.getElementById('display-area');
+
+
+        var inputBlured = function(){
+            displayActionArea.innerHTML = 'Input Blurred';
+        };
+
+        /*document.addEventListener('click', function(){
+            if(document.activeElement.id === 'myInput'){
+                return;
+            }
+            displayActionArea.innerHTML = 'Received Click outside of INPUT';
+        });*/
+    </script>
+</body>
+
+</html>
